@@ -1,3 +1,89 @@
-.apple-mobile {
-  color: cadetblue;
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+body{
+    padding:5px;
+    background-image: url('img/bg-img.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+.fa.fa-bars.ham{
+    float:right;
+    margin-top:10px;
+    font-size: large;
+    display:none;
+    color: blue;
+}
+.starter {
+    font-size: 50px;
+    font-weight: 700;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 0;
+    padding-top: 50px;
+}
+.logo{
+    margin-top:0px;
+    margin-left: 50px;
+    font-size: 30px;
+    color: blue;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.div-nav-ul{
+    position:absolute;
+    top:15px;
+    right:0px;
+    list-style-type:none;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+}
+.div-nav-ul li{
+    float:left;
+    font-size: 20px;
+    padding-right:20px;
+}
+.div-nav-ul li a{
+    text-decoration: none;
+}
+.div-nav{
+    justify-content: center;
+}
+#toggle{
+    visibility: hidden;
+}
+.main-section {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 20px;
+    display: flex;
+
+}
+
+/*****Responsive***/
+
+@media screen and (max-width:900px){
+    .div-nav{
+        display:none;
+        float: none;
+    }
+    .fa.fa-bars.ham{
+        display:block;
+    }
+    #toggle:checked ~ .div-nav{
+        display:block;
+        text-align: center;
+        margin-top:50px;
+    }
+    .div-nav-ul li{
+        float:none;
+        font-size: 20px;
+        padding-right:20px;
+    }
+    .div-nav-ul{
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .main-section{
+        flex-direction: column;
+        order: 2;
+    }
 }
